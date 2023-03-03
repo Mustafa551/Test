@@ -8,9 +8,13 @@ import Signup from '../screens/auth/signup/Signup';
 
 const Stack = createNativeStackNavigator();
 
-const Auth = () => {
-    <Stack.Navigator>
-        <Stack.Screen options={{
+
+const Mystack = () => {
+  return (
+    <NavigationContainer>
+            <Stack.Navigator>
+
+                <Stack.Screen options={{
             headerShown: false,
         }} name="Myotp" component={Myotp} />
         <Stack.Screen options={{
@@ -19,15 +23,6 @@ const Auth = () => {
         <Stack.Screen options={{
             headerShown: false,
         }}  name="Signup" component={Signup} />
-    </Stack.Navigator>
-}
-const Mystack = () => {
-  return (
-    <NavigationContainer>
-        <Stack.Navigator>
-        <Stack.Screen options={{
-            headerShown: false,
-        }}  name="Auth" component={Auth} />
         </Stack.Navigator>
     </NavigationContainer>
   )
